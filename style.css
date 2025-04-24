@@ -1,0 +1,224 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+/* logo */
+.navbar-brand{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: url('/images/image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px dotted rgb(112, 48, 48);
+}
+
+/* mood today */
+.dropdown-menu{
+    background-color: rgba(255,0,0,0.5);
+}
+.dropdown-item{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.dropdown-item:hover{
+    color: black;
+    text-shadow: 2px 2px 2px gray;
+}
+
+/* option choices */
+.item-container{
+    height: 150px;
+    width: 94%;
+    max-width: 1533px;
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden; 
+    margin-top: 20px;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0)); 
+}
+@keyframes linear-move{
+    to{
+        left: -100px;
+    }
+}
+
+.item{
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    left: max(1050px,100%);
+    animation: linear-move 28s linear infinite ;
+    cursor: pointer;
+}
+
+.item1{
+    background-image: url('/images/food\ option\ section/stick-icecream.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -4s;
+}
+.item1::after{
+    content: "Stick-Ice";
+    /* background: red; */
+    height: 20px;
+    width: 100%;
+    color: bisque;
+    position: absolute;
+    bottom: -12px;
+    left: 14px;
+    font-size: larger;
+    font-weight: 600;
+}
+.item2{
+    background-image: url('/images/food\ option\ section/coneoflove.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -8s;
+}
+.item2::after{
+    content: "Cone of love";
+    /* background: red; */
+    height: 20px;
+    width: 100%;
+    color: pink;
+    position: absolute;
+    bottom: -12px;
+    left: 14px;
+    font-size: larger;
+    font-weight: 600;
+}
+.item3{
+    background-image: url('/images/food\ option\ section/shake.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -12s;
+}
+.item3::after{
+    content: "Shake shake";
+    /* background: red; */
+    height: 20px;
+    width: 100%;
+    color: rgb(137, 79, 89);
+    position: absolute;
+    bottom: -12px;
+    left: 8px;
+    font-size: larger;
+    font-weight: 600;
+}
+.item4{
+    background-image: url('/images/food\ option\ section/chicken.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -16s;
+}
+.item4::after{
+    content: "Chicken";
+    /* background: red; */
+    height: 20px;
+    width: 70%;
+    color: white;
+    position: absolute;
+    bottom: -12px;
+    left: 30px;
+    font-size: larger;
+    font-weight: 600;
+}
+.item5{
+    background-image: url('/images/food\ option\ section/kebabs.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -20s;
+}
+.item5::after{
+    content: "Kebabs";
+    /* background: red; */
+    height: 20px;
+    width: 80%;
+    color: rgb(201, 50, 50);
+    position: absolute;
+    bottom: -12px;
+    left: 28px;
+    font-size: larger;
+    font-weight: 600;
+}
+.item6{
+    background-image: url('/images/food\ option\ section/snaks.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -24s;
+}
+.item6::after{
+    content: "Snacks";
+    /* background: red; */
+    height: 20px;
+    width: 80%;
+    color: rgb(200, 139, 42);
+    position: absolute;
+    bottom: -12px;
+    left: 19px;
+    font-size: larger;
+    font-weight: 600;
+}
+.item7{
+    background-image: url('/images/food\ option\ section/tea.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-delay: -28s;
+}
+.item7::after{
+    content: "Tea";
+    /* background: red; */
+    height: 20px;
+    width: 80%;
+    color: rgb(111, 53, 16);
+    position: absolute;
+    bottom: -12px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+/* main section */
+.main-container{
+    height: max-content;
+    width: max(90%,max-content);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 100px;
+    background-color: red;
+}
+.foods{
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    border-radius: 10%;
+}
+.robot-container{
+    position: relative;
+    height: 600px;
+    width: 600px;
+    background: linear-gradient(0.25turn, white,gray,rgb(71, 69, 69));
+    border-radius: 10%;
+    overflow: hidden;
+}
+.robot{
+    position: absolute;
+    height: 600px;
+    width: 800px;
+}
+
+@media (max-width: 1000px) {
+    /* .robot-container{
+        /* display: none; */
+    
+}
