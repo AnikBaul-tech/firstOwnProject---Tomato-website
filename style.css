@@ -1,13 +1,85 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: black;
+/* Default: Dark Mode */
+body {
+  background-color: black;
+  color: white;
 }
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+body.light-mode .navbar {
+  background-color: #ffffff !important;
+}
+body.light-mode .nav-link {
+  color: black !important;
+  text-shadow: none;
+}
+
+/* Optional hover effect */
+body.light-mode .nav-link:hover {
+  color: #ec1123 !important; /* or any accent color you prefer */
+}
+
+body.light-mode .dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .dropdown-item {
+  color: #000000;
+
+}
+
+body.light-mode .food-menu {
+  border-color: #222;
+}
+
+body.light-mode .food-menu-head {
+  color: #000000;
+}
+
+body.light-mode .bot-message {
+  color: #ec1123;
+  text-shadow: none;
+  border-right-color: #ec1123;
+}
+
+body.light-mode .navbar-brand {
+  border-color: #444;
+}
+
+body.light-mode .toggle-button{
+    border-color: #444;
+    background: black;
+    color: rgb(255, 255, 255);
+}
+
+body.light-mode .recongnitions{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    background: linear-gradient(to right, rgb(180, 170, 170),rgb(255, 255, 255));
+}
+body.light-mode footer{
+    background: linear-gradient(to right, rgb(180, 172, 172),rgb(233, 228, 228));
+    mask-image: linear-gradient(to top, rgba(209, 198, 198, 0),rgb(192, 173, 173) 20%, rgb(219, 208, 208) 80%, rgb(231, 224, 224)); 
+}
+body.light-mode .gradient-text{
+  background: linear-gradient(to right, #eaf12d, #ffcc00);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* dark-light mode ends here */
 
 /* logo */
 .navbar-brand{
@@ -198,13 +270,7 @@ body{
     /* background-color: red; */
     gap: 50px;
 }
-.foods{
-    height: 600px;
-    width: 600px;
-    border: 5px dotted white;
-    border-radius: 10%;
-    flex: 1 1 auto;
-}
+/* robot section */
 .robot-container{
     position: relative;
     height: 600px;
@@ -225,12 +291,49 @@ body{
     flex: 1 1 auto;
     display: flex;
     justify-content: row-reverse;
+    z-index: -1;
 }
 .cover-box{
     height: 30px;
     width: 50px;
     background-color: blueviolet;
 }
+#bot-message-container{
+    height: fit-content;
+    width: 350px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 5px;
+    margin-top: 100px; 
+    /* background: linear-gradient(white,gray,black); */
+    background: transparent;
+}
+.bot-message{ 
+    color: #ff4d4d;
+    font-size: 3.2rem;
+    text-shadow: 2px 1px 1px black;
+    display: inline-block;
+    /* border-right: 2px solid #ec1123; */
+    animation: blink 1s step-start infinite;
+}
+
+/* Annimation */
+@keyframes typing {
+    from {
+      width: 0;
+      color: transparent;
+    }
+    to {
+      width: 100%;
+    }
+}
+
+/* @keyframes blink {
+  50% { border-color: transparent; }
+} */
+/* Animation ends here */
+
 @media (max-width: 1000px) {
     .robot-container{
        display: none;
@@ -241,3 +344,177 @@ body{
        width: 1400px;
     } 
 }
+/* Robot section ends here */
+/* Food Menu section */
+.food-menu{
+    height: 600px;
+    width: 600px;
+    border: 5px dotted white;
+    border-radius: 10%;
+    flex: 1 1 auto;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.food-menu-head{
+    position: relative;
+    height: 15%;
+    width: 100%;
+    border-radius: 60px 60px 0 0;
+    /* background-color: red; */
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px;
+    overflow: hidden;
+    font-size: 22px;
+}
+.head-1{
+    position: relative;
+    width: 50%;
+    flex: 1 1 auto;
+}
+.icon-container{
+    flex: 1 1 auto;
+    transform: scale(2);
+}
+.icon-container .fa-person-biking{
+    position: relative;
+    animation: movingbike 2s ease-in infinite;
+    left: 20px;
+    color: red;
+}
+@keyframes movingbike {
+    to{
+        left: 130px;
+    }
+}
+@media (max-width: 550px){
+    .icon-container .fa-person-biking{
+        position: absolute;
+        right: 2px;
+    }
+    .main-container{
+        padding: 0px 0px;
+    }
+}
+
+/* footer section */
+footer{
+    margin-top: 50px;
+    background: linear-gradient(to right, rgb(51, 50, 50),black);
+    mask-image: linear-gradient(to top, rgba(0,0,0,0),rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0)); 
+}
+/* awards section */
+.recongnitions{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    background: linear-gradient(to right, rgb(57, 55, 55),black);
+}
+.awards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #eaf12d, #ffffff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* awards ends */
+
+/* last line */
+.connect-msg{
+    height: 30px;
+    margin: auto;
+}
+/* last line ends */
+
+/* multiple accounts */
+.social-media{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.accounts{
+    height: 60px;
+    margin: auto;
+}
+.fa-instagram{
+    transition: 2s;
+}
+.fa-instagram:hover{
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.fa-square-facebook{
+    transition: 2s;
+}
+.fa-square-facebook:hover{
+    color: rgb(1, 101, 225);
+}
+.fa-whatsapp{
+    transition: 2s;
+}
+.fa-whatsapp:hover{
+    color: green;
+}
+.fa-envelope{
+    transition: 2s;
+}
+.fa-envelope:hover{
+  background: linear-gradient(45deg, red, yellow);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-linkedin{
+    transition: 2s;
+}
+.fa-linkedin:hover{
+    color: blue;
+}
+/* social accounts ends here */
+
+/* locations of the outlets */
+.map-img {
+    height: 300px;
+    width: 100%;
+    background-image: url("../images/map-of-the-world.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 30%;
+    position: absolute;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0)); 
+}
+
+.locations{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+.outlet-loc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-weight: 700;
+    background: linear-gradient(45deg, red, yellow);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px dashed red;
+}
+/* locations ends here */
+.blank{
+    height: 60px;
+}
+/* footer ends */
