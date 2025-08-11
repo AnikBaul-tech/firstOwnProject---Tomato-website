@@ -406,7 +406,6 @@ spline-viewer {
         padding: 0px 0px;
     }
 }
-
 /* .food-card{
     height: 80px;
     width: 100%;
@@ -497,7 +496,11 @@ spline-viewer {
   height: 100%;
   object-fit: cover;
 }
-
+@media (max-width: 480px) {
+  .food-card-container{
+    width: 300px;
+  }
+}
 
 /* footer section */
 footer{
