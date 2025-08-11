@@ -35,6 +35,7 @@ body.light-mode .dropdown-menu {
 
 body.light-mode .dropdown-item {
   color: #000000;
+  text-shadow: 2px 2px 2px rgb(194, 178, 178);
 
 }
 
@@ -44,6 +45,10 @@ body.light-mode .food-menu {
 
 body.light-mode .food-menu-head {
   color: #000000;
+}
+
+body.light-mode .item2::after{
+    text-shadow: 2px 2px 2px black;
 }
 
 body.light-mode .bot-message {
@@ -142,7 +147,7 @@ body.light-mode .gradient-text{
     /* background: red; */
     height: 20px;
     width: 100%;
-    color: bisque;
+    color: brown;
     position: absolute;
     bottom: -12px;
     left: 14px;
@@ -163,12 +168,11 @@ body.light-mode .gradient-text{
     color: pink;
     position: absolute;
     bottom: -12px;
-    left: 14px;
     font-size: larger;
     font-weight: 600;
 }
 .item3{
-    background-image: url('/images/food\ option\ section/shake.png');
+    background-image: url('./images/food\ option\ section/shake.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -12s;
@@ -181,7 +185,6 @@ body.light-mode .gradient-text{
     color: rgb(137, 79, 89);
     position: absolute;
     bottom: -12px;
-    left: 8px;
     font-size: larger;
     font-weight: 600;
 }
@@ -196,10 +199,9 @@ body.light-mode .gradient-text{
     /* background: red; */
     height: 20px;
     width: 70%;
-    color: white;
+    color: rgb(207, 60, 15);
     position: absolute;
     bottom: -12px;
-    left: 30px;
     font-size: larger;
     font-weight: 600;
 }
@@ -235,7 +237,6 @@ body.light-mode .gradient-text{
     color: rgb(200, 139, 42);
     position: absolute;
     bottom: -12px;
-    left: 19px;
     font-size: larger;
     font-weight: 600;
 }
@@ -271,6 +272,12 @@ body.light-mode .gradient-text{
     gap: 50px;
 }
 /* robot section */
+spline-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .robot-container{
     position: relative;
     height: 600px;
@@ -287,12 +294,11 @@ body.light-mode .gradient-text{
     position: absolute;
     height: 600px;
     width: 900px;
-    /* left: 1%; */
     flex: 1 1 auto;
     display: flex;
     justify-content: row-reverse;
-    z-index: -1;
 }
+
 .cover-box{
     height: 30px;
     width: 50px;
@@ -401,6 +407,98 @@ body.light-mode .gradient-text{
     }
 }
 
+/* .food-card{
+    height: 80px;
+    width: 100%;
+    background: rgba(255,0,0,0.5);
+    color: white;
+}
+.food-name{
+    font-size: large;
+}
+.food-img{
+    height: 80px;
+    width: 80px;
+    background: #8134af;
+    position: absolute;
+} */
+.food-card-container{
+    height: 460px;
+    width: 600px;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    /* background: blue; */
+    gap: 10px;
+}
+.food-card {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 90%;
+  padding: 0 0 0 5px;
+  box-sizing: border-box;
+  background: rgba(255,0,0,0.4);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(159, 153, 153, 0.1);
+  text-shadow: 2px 2px 2px black;
+  transition: 1.5s;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 2px black;
+}
+.food-card:hover{
+    scale: 1.15;
+    background: wheat;
+    color: black;
+    text-shadow: 2px 2px 2px rgb(111, 98, 98);
+}
+.food-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-right: 12px;
+}
+
+.food-name {
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.food-description {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.food-image {
+  width: 100px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /* footer section */
 footer{
     margin-top: 50px;
@@ -503,6 +601,11 @@ footer{
     height: 150px;
 }
 .outlet-loc{
+    height: 80px;
+    width: 100px;
+    size: 30px;
+    max-height: max-content;
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -512,6 +615,12 @@ footer{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 1px dashed red;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+.outlet-loc:hover{
+    border: 2px dashed yellow;
 }
 /* locations ends here */
 .blank{

@@ -62,3 +62,12 @@ const toggleBtn = document.getElementById('theme-toggle');
     const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
     localStorage.setItem('theme', theme);
   });
+
+  gl.viewport(0, 0, canvas.width, canvas.height);
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  gl.viewport(0, 0, canvas.width, canvas.height);
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
