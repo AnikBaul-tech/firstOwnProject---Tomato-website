@@ -19,6 +19,7 @@ body.light-mode {
 body.light-mode .navbar {
   background-color: #ffffff !important;
 }
+
 body.light-mode .nav-link {
   color: black !important;
   text-shadow: none;
@@ -73,10 +74,12 @@ body.light-mode .recongnitions{
     height: 150px;
     background: linear-gradient(to right, rgb(180, 170, 170),rgb(255, 255, 255));
 }
+
 body.light-mode footer{
     background: linear-gradient(to right, rgb(180, 172, 172),rgb(233, 228, 228));
     mask-image: linear-gradient(to top, rgba(209, 198, 198, 0),rgb(192, 173, 173) 20%, rgb(219, 208, 208) 80%, rgb(231, 224, 224)); 
 }
+
 body.light-mode .gradient-text{
   background: linear-gradient(to right, #eaf12d, #ffcc00);
   background-clip: text;
@@ -406,21 +409,7 @@ spline-viewer {
         padding: 0px 0px;
     }
 }
-/* .food-card{
-    height: 80px;
-    width: 100%;
-    background: rgba(255,0,0,0.5);
-    color: white;
-}
-.food-name{
-    font-size: large;
-}
-.food-img{
-    height: 80px;
-    width: 80px;
-    background: #8134af;
-    position: absolute;
-} */
+
 .food-card-container{
     height: 460px;
     width: 600px;
@@ -430,7 +419,7 @@ spline-viewer {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     /* background: blue; */
-    gap: 10px;
+    margin-top: 10px;
 }
 .food-card {
 
@@ -502,6 +491,31 @@ spline-viewer {
   }
 }
 
+.filter-toggle{
+    margin-left: 20px;
+}
+.filter-toggle button{
+    background: transparent;
+    border: none;
+    transition: 0.5s;
+}
+.filter-toggle button:hover{
+    transform: scale(1.2);
+}
+#all{
+    color: rgb(95, 45, 45);
+    margin: 5px;
+}
+
+#veg{
+    color: green;
+    margin: 5px;
+}
+
+#non-veg{
+    color: red;
+    margin: 5px;
+}
 /* footer section */
 footer{
     margin-top: 50px;

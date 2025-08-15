@@ -71,3 +71,11 @@ function resizeCanvas() {
 }
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
+
+function setFilter(type) {
+  const cards = document.querySelectorAll('.food-card');
+  cards.forEach(card => {
+    const foodType = card.getAttribute('data-type');
+    card.style.display = (type === 'all' || type === foodType) ? 'flex' : 'none';
+  });
+}
