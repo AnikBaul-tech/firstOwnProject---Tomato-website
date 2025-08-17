@@ -583,14 +583,23 @@ footer{
 .fa-whatsapp:hover{
     color: green;
 }
-.fa-envelope{
+.fa-g{
     transition: 2s;
 }
-.fa-envelope:hover{
-  background: linear-gradient(45deg, red, yellow);
+.fa-g:hover {
+  background: conic-gradient(
+    from 45deg,
+    #4285F4 0deg 90deg,     /* Red */
+    #FBBC05 90deg 180deg,   /* Yellow */
+    #34A853 180deg 270deg,  /* Green */
+    #EA4335 270deg 360deg   /* Blue */
+  );
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 .fa-linkedin{
     transition: 2s;
 }
