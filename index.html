@@ -49,7 +49,7 @@
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2 search_input" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-danger national-park-thin" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           <button id="theme-toggle" class="btn btn-outline-light ms-3 toggle-button">
             <i class="fa-solid fa-circle-half-stroke"></i>
@@ -73,35 +73,34 @@
 <!-- choices ends here -->
 
 <div class="main-container">
-<!-- food menu -->
-<div class="food-menu">
-  <div class="food-menu-head">
-    <div class="head-1 national-park-semibold">
-      <span style="font-size: larger;">WHY</span>
-      step outside..? when
-      <i><span style="font-size: 30px; color: red;">TOMATO </span></i>
-      is here..
-    </div>
-    <div class="icon-container"><i class="fa-solid fa-person-biking"></i></div>
-  </div>
-  <div class="filter-toggle">
-        <button onclick="setFilter('all')" class="national-park-semibold" id="all">All</button>
-        <button onclick="setFilter('veg')" class="national-park-semibold" id="veg">Veg</button>
-        <button onclick="setFilter('non-veg')" class="national-park-semibold" id="non-veg">Non-Veg</button>
+  <!-- food menu -->
+  <div class="food-menu">
+    <div class="food-menu-head">
+      <div class="head-1 national-park-semibold">
+        <span style="font-size: larger;">WHY</span>
+        step outside..? when
+        <i><span style="font-size: 30px; color: red;">TOMATO </span></i>
+        is here..
       </div>
-  <div class="food-card-container">
+      <div class="icon-container"><i class="fa-solid fa-person-biking"></i></div>
+    </div>
+    <div class="filter-toggle">
+          <button onclick="setFilter('all')" class="national-park-semibold" id="all">All</button>
+          <button onclick="setFilter('veg')" class="national-park-semibold" id="veg">Veg</button>
+          <button onclick="setFilter('non-veg')" class="national-park-semibold" id="non-veg">Non-Veg</button>
+    </div>
+    <div class="food-card-container"></div>
+  </div>
+  <!-- robot spline -->
+  <div class="robot-container">
+    <div class="robot">
+      <spline-viewer url="https://prod.spline.design/UmCl3cuzyj0wpA9X/scene.splinecode"></spline-viewer>
+    </div>
+    <div id="bot-message-container" class="">
+      <div class="bot-message national-park-semibold"><!-- Bot messages here --></div>
+    </div>
   </div>
 </div>
-      <!-- robot spline -->
-      <div class="robot-container">
-        <div class="robot">
-          <spline-viewer url="https://prod.spline.design/UmCl3cuzyj0wpA9X/scene.splinecode"></spline-viewer>
-        </div>
-        <div id="bot-message-container" class="">
-          <div class="bot-message national-park-semibold"><!-- Bot messages here --></div>
-        </div>
-      </div>
-      </div>
      <!-- robot ends here -->
 
     <!-- bootstrap js -->

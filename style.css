@@ -412,7 +412,7 @@ spline-viewer {
 
 .food-card-container{
     height: 440px;
-    width: 600px;
+    width: 650px;
     padding: 10px;
     overflow-y: auto;
     scrollbar-width: none;
@@ -426,7 +426,7 @@ spline-viewer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100px;
   width: 90%;
   padding: 0 0 0 5px;
   box-sizing: border-box;
@@ -465,16 +465,21 @@ spline-viewer {
   text-overflow: ellipsis;
 }
 
+.food-price-description{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .food-description {
-  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .food-image {
-  width: 100px;
-  height: 80px;
+  width: 120px;
+  height: 100px;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -516,6 +521,7 @@ spline-viewer {
     color: red;
     margin: 5px;
 }
+
 /* footer section */
 footer{
     margin-top: 50px;
