@@ -308,7 +308,7 @@ spline-viewer {
     background-color: blueviolet;
 }
 #bot-message-container{
-    height: fit-content;
+    height: 200px;
     width: 350px;
     box-sizing: border-box;
     border-radius: 10px;
