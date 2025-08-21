@@ -320,11 +320,16 @@ spline-viewer {
 }
 .bot-message{ 
     color: #ff4d4d;
-    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-size: 40px;
     text-shadow: 2px 1px 1px black;
     display: inline-block;
     /* border-right: 2px solid #ec1123; */
     animation: blink 1s step-start infinite;
+}
+@media (max-width: 600px) {
+  .bot-message {
+    font-size: 28px;
+  }
 }
 
 /* Annimation */
