@@ -94,7 +94,7 @@ body.light-mode .gradient-text{
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background-image: url('/images/image.png');
+    background-image: url('./images/image.png');
     background-size: cover;
     background-repeat: no-repeat;
     border: 2px dotted rgb(112, 48, 48);
@@ -618,7 +618,7 @@ footer{
 .map-img {
     height: 300px;
     width: 100%;
-    background-image: url("../images/map-of-the-world.jpg");
+    background-image: url("./images/map-of-the-world.jpg");
     background-size: cover;
     background-position: center;
     z-index: -1;
