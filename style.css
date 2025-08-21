@@ -140,7 +140,7 @@ body.light-mode .gradient-text{
 }
 
 .item1{
-    background-image: url('/images/food\ option\ section/stick-icecream.png');
+    background-image: url('./images/food\ option\ section/stick-icecream.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -4s;
@@ -158,7 +158,7 @@ body.light-mode .gradient-text{
     font-weight: 600;
 }
 .item2{
-    background-image: url('/images/food\ option\ section/coneoflove.png');
+    background-image: url('./images/food\ option\ section/coneoflove.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -8s;
@@ -192,7 +192,7 @@ body.light-mode .gradient-text{
     font-weight: 600;
 }
 .item4{
-    background-image: url('/images/food\ option\ section/chicken.png');
+    background-image: url('./images/food\ option\ section/chicken.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -16s;
@@ -209,7 +209,7 @@ body.light-mode .gradient-text{
     font-weight: 600;
 }
 .item5{
-    background-image: url('/images/food\ option\ section/kebabs.png');
+    background-image: url('./images/food\ option\ section/kebabs.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -20s;
@@ -227,7 +227,7 @@ body.light-mode .gradient-text{
     font-weight: 600;
 }
 .item6{
-    background-image: url('/images/food\ option\ section/snaks.png');
+    background-image: url('./images/food\ option\ section/snaks.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -24s;
@@ -244,7 +244,7 @@ body.light-mode .gradient-text{
     font-weight: 600;
 }
 .item7{
-    background-image: url('/images/food\ option\ section/tea.png');
+    background-image: url('./images/food\ option\ section/tea.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation-delay: -28s;
