@@ -360,6 +360,7 @@ spline-viewer {
 }
 /* Robot section ends here */
 /* Food Menu section */
+
 .food-menu{
     height: 600px;
     width: 600px;
@@ -381,7 +382,7 @@ spline-viewer {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding-left: 20px;
+    padding: 20px;
     overflow: hidden;
     font-size: 22px;
 }
