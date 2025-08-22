@@ -390,6 +390,7 @@ spline-viewer {
     position: relative;
     width: 50%;
     flex: 1 1 auto;
+    flex-wrap: wrap;
 }
 .icon-container{
     flex: 1 1 auto;
