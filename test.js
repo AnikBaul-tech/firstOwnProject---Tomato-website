@@ -231,3 +231,68 @@ searchInput.addEventListener('input', () => {
       }
   });
 });
+
+const openBtn = document.getElementById("openFeedbackBtn");
+const closeBtn = document.getElementById("closeFeedbackBtn");
+const feedbackSection = document.getElementById("feedbackSection");
+const feedbackForm = document.getElementById("feedbackForm");
+const communityFeedback = document.getElementById("communityFeedback");
+
+// Load feedbacks from localStorage
+let feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+
+// Show stored feedbacks on load
+window.onload = () => {
+  renderFeedbacks();
+};
+
+// Open Feedback Section
+openBtn.addEventListener("click", () => {
+  feedbackSection.style.display = "flex";
+});
+
+// Close Feedback Section
+closeBtn.addEventListener("click", () => {
+  feedbackSection.style.display = "none";
+});
+
+// Handle Feedback Submission
+feedbackForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("userName").value.trim();
+  const feedback = document.getElementById("userFeedback").value.trim();
+
+  if (name && feedback) {
+    const newFeedback = { id: Date.now(), name, feedback };
+    feedbacks.push(newFeedback);
+    localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+
+    renderFeedbacks();
+    feedbackForm.reset();
+  }
+});
+
+// Render Feedbacks
+function renderFeedbacks() {
+  communityFeedback.innerHTML = "";
+  feedbacks.forEach(fb => {
+    const fbDiv = document.createElement("div");
+    fbDiv.classList.add("feedback-card");
+    fbDiv.innerHTML = `
+      <strong>${fb.name}</strong>
+      <p>${fb.feedback}</p>
+      <button class="btn btn-sm btn-danger" onclick="deleteFeedback(${fb.id})">Delete</button>
+    `;
+    communityFeedback.appendChild(fbDiv);
+  });
+}
+
+// Delete Feedback
+function deleteFeedback(id) {
+  feedbacks = feedbacks.filter(fb => fb.id !== id);
+  localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+  renderFeedbacks();
+}
+
+// Expose deleteFeedback to global scope
+window.deleteFeedback = deleteFeedback;

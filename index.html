@@ -47,6 +47,10 @@
               <li><a class="dropdown-item national-park-bold" href="#">Drinks🔞</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <!-- Feedback Button -->
+            <button id="openFeedbackBtn" class="btn btn-danger">Feedback</button>
+          </li>
         </ul>
         <form class="d-flex">
           <input class="form-control me-2 search_input" type="search" placeholder="Search" aria-label="Search">
@@ -90,6 +94,40 @@
           <button onclick="setFilter('non-veg')" class="national-park-semibold" id="non-veg">Non-Veg</button>
     </div>
     <div class="food-card-container"></div>
+  </div>
+
+  <!-- Feedback Section -->
+  <div id="feedbackSection" class="mt-4 row">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="mb-0">Feedback Section</h4>
+      <button id="closeFeedbackBtn" class="btn btn-outline-danger btn-sm">✖</button>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="col-md-6">
+      <div class="card p-3 shadow-sm" style="background: transparent;">
+        <h5>Submit Your Feedback</h5>
+        <form id="feedbackForm">
+          <div class="mb-3">
+            <label for="userName" class="form-label">Your Name</label>
+            <input type="text" id="userName" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="userFeedback" class="form-label">Feedback</label>
+            <textarea id="userFeedback" class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Community Feedback -->
+    <div class="col-md-6">
+      <div class="card p-3 shadow-sm" style="background: transparent;">
+        <h5>Community Feedback</h5>
+        <div id="communityFeedback"></div>
+      </div>
+    </div>
   </div>
   <!-- robot spline -->
   <div class="robot-container">
