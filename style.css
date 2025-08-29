@@ -269,6 +269,7 @@ body.light-mode .gradient-text{
 
 /* main section */
 .main-container{
+    position: relative;
     height: max-content;
     width: 98vw;
     display: flex;
@@ -705,4 +706,51 @@ footer{
     padding: 10px;
     margin-bottom: 10px;
     background: transparent;
+}
+
+/* Small devices (phones, up to 576px) */
+@media (max-width: 576px) {
+  #feedbackSection {
+    width: 95%;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  #feedbackSection h4,
+  #feedbackSection h5 {
+    font-size: 1.1rem;
+  }
+
+  #feedbackSection .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Medium devices (tablets, 577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  #feedbackSection {
+    width: 90%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #feedbackSection h4,
+  #feedbackSection h5 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Large devices (desktops, 769px and up) */
+@media (min-width: 769px) {
+  #feedbackSection {
+    width: 80%;
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+
+  #feedbackSection h4,
+  #feedbackSection h5 {
+    font-size: 1.4rem;
+  }
 }

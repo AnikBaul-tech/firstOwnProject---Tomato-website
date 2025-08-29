@@ -247,9 +247,18 @@ window.onload = () => {
 };
 
 // Open Feedback Section
+let isOpen = false;
+
 openBtn.addEventListener("click", () => {
-  feedbackSection.style.display = "flex";
+  isOpen = !isOpen; // Toggle the state
+
+  if (isOpen) {
+    feedbackSection.style.display = "flex";
+  } else {
+    feedbackSection.style.display = "none";
+  }
 });
+
 
 // Close Feedback Section
 closeBtn.addEventListener("click", () => {
