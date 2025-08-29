@@ -92,6 +92,9 @@ body.light-mode .gradient-text{
   font-weight: bold;
   font-size: 1.5rem;
 }
+body.light-mode #feedbackSection{
+    background: rgba(209, 197, 197, 0.9);
+}
 /* dark-light mode ends here */
 
 /* logo */

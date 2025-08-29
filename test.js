@@ -290,7 +290,7 @@ function renderFeedbacks() {
     fbDiv.innerHTML = `
       <strong>${fb.name}</strong>
       <p>${fb.feedback}</p>
-      <button class="btn btn-sm btn-danger" onclick="deleteFeedback(${fb.id})">Delete</button>
+      <button class="btn btn-sm btn-danger" onclick="deleteFeedback(${fb.id})"><i class="fa-solid fa-trash-can"></i></button>
     `;
     communityFeedback.appendChild(fbDiv);
   });
