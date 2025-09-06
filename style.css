@@ -572,7 +572,7 @@ footer{
 .recongnitions{
     display: flex;
     justify-content: center;
-    height: 150px;
+    height: 200px;
     background: linear-gradient(to right, rgb(57, 55, 55),black);
 }
 .awards{
