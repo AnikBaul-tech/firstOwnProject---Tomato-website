@@ -270,9 +270,10 @@ feedbackForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("userName").value.trim();
   const feedback = document.getElementById("userFeedback").value.trim();
+  const color = randomColour();
 
   if (name && feedback) {
-    const newFeedback = { id: Date.now(), name, feedback };
+    const newFeedback = { id: Date.now(), name, feedback, color };
     feedbacks.push(newFeedback);
     localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
 
@@ -281,6 +282,11 @@ feedbackForm.addEventListener("submit", (e) => {
   }
 });
 
+function randomColour(){
+  const colour = ['red','green','blue','purple','yellow'];
+  const randomColor = colour[Math.floor(Math.random() * colour.length)];
+  return randomColor;
+}
 // Render Feedbacks
 function renderFeedbacks() {
   communityFeedback.innerHTML = "";
@@ -288,7 +294,10 @@ function renderFeedbacks() {
     const fbDiv = document.createElement("div");
     fbDiv.classList.add("feedback-card");
     fbDiv.innerHTML = `
-      <strong>${fb.name}</strong>
+      <div class="profile_details">
+        <img src="./images/profile_pics/${fb.color}.png" width="40px" id="profile_pic"></img>
+        <strong>${fb.name}</strong>
+      </div>
       <p>${fb.feedback}</p>
       <button class="btn btn-sm btn-danger" onclick="deleteFeedback(${fb.id})"><i class="fa-solid fa-trash-can"></i></button>
     `;

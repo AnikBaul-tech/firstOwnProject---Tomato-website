@@ -451,7 +451,6 @@ spline-viewer {
     margin-top: 10px;
 }
 .food-card {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -691,6 +690,7 @@ footer{
 
 /* Feedback section */
 #feedbackSection {
+   max-height: 500px;
     display: none;
     position: fixed;
     top: 50%;
@@ -701,7 +701,6 @@ footer{
     padding: 10px;
     border-radius: 10px;
     overflow-y: auto;
-
 }
 .feedback-card {
     border: 1px solid #ddd;
@@ -709,6 +708,7 @@ footer{
     padding: 10px;
     margin-bottom: 10px;
     background: transparent;
+    scrollbar-width: none;
 }
 
 /* Small devices (phones, up to 576px) */
@@ -756,4 +756,17 @@ footer{
   #feedbackSection h5 {
     font-size: 1.4rem;
   }
+}
+
+.profile_details{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#profile_pic{
+  height:42px; 
+  width:42px; 
+  border-radius:50%; 
+  background:white;
 }
